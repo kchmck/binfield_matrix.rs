@@ -1,6 +1,6 @@
 [package]
 name = "binfield_matrix"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Mick Koch <mick@kochm.co>"]
 description = "Vector-matrix multiplication for GF(2) codes"
 license = "MIT"
