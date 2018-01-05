@@ -2,7 +2,7 @@
 //! binary field error correction codes.
 //!
 //! These routines calculate the multiplication **vM**<sup>T</sup> = **Mv**<sup>T</sup> of
-//! a 1×N binary vector **v** with an N×M binary matrix **M**, using GF(2) addition and
+//! a 1×M binary vector **v** with an N×M binary matrix **M**, using GF(2) addition and
 //! multiplication. The input vector, output vector, and matrix columns are represented as
 //! binary words, so the maximum vector size is determined by the maximum machine word
 //! size.
