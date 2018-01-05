@@ -1,10 +1,11 @@
 //! Vector-matrix multiplication for [GF(2)](http://mathworld.wolfram.com/FiniteField.html)
 //! binary field error correction codes.
 //!
-//! These routines calculate the multiplication **vM** of a 1×N binary vector **v** with
-//! an N×M binary matrix **M**, using GF(2) addition and multiplication. The input vector,
-//! output vector, and matrix columns are represented as binary words, so the maximum
-//! vector size is determined by the maximum machine word size.
+//! These routines calculate the multiplication **vM**<sup>T</sup> = **Mv**<sup>T</sup> of
+//! a 1×N binary vector **v** with an N×M binary matrix **M**, using GF(2) addition and
+//! multiplication. The input vector, output vector, and matrix columns are represented as
+//! binary words, so the maximum vector size is determined by the maximum machine word
+//! size.
 //!
 //! ## Example
 //!
@@ -48,7 +49,7 @@ extern crate num_traits;
 
 use num_traits::PrimInt;
 
-/// Compute **vM**, where **v** is the given word and **M** is the given
+/// Compute **vM**<sup>T</sup>, where **v** is the given word and **M** is the given
 /// matrix.
 pub fn matrix_mul<I, O>(word: I, mat: &[I]) -> O where
     I: PrimInt,
@@ -57,7 +58,7 @@ pub fn matrix_mul<I, O>(word: I, mat: &[I]) -> O where
     accum_rows(word, O::zero(), mat)
 }
 
-/// Compute [ **v** | **vM** ], where **v** is the given word and **M** is the
+/// Compute [ **v** | **vM**<sup>T</sup> ], where **v** is the given word and **M** is the
 /// given matrix.
 pub fn matrix_mul_systematic<I, O>(word: I, mat: &[I]) -> O where
     I: PrimInt + Into<O>,
