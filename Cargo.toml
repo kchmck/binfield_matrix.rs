@@ -10,4 +10,4 @@ keywords = ["ecc", "fec", "binary", "field", "matrix"]
 
 [dependencies]
 
-num-traits = "0.1.41"
+num-traits = "0.2"
